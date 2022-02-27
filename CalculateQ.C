@@ -48,7 +48,7 @@ using namespace RooFit ;
 void CalculateQ(Int_t i_e,Int_t f_e)  //initial event 
 {
 	// read data file to get information for Q factor
-    TString workdir ="/w/halld-scshelf2101/halld2/home/shankar/OpenCharm/KspKm/flatTree/qfactor/v2/";
+    TString workdir ="./";
 
 	TString outdir = workdir + "RootQ/";
 	string makeoutdir("mkdir " +  outdir);
@@ -59,8 +59,8 @@ void CalculateQ(Int_t i_e,Int_t f_e)  //initial event
 	system(makeoutdir1.c_str());
 
 
-	TString indir1 ="/w/halld-scshelf2101/halld2/home/shankar/OpenCharm/KspKm/flatTree/qfactor/v2/";
-	TString infilename1= indir1 + "KsKmpip1.root";
+	TString indir1 ="./";
+	TString infilename1= indir1 + "test.root";
 	TChain *chain = new TChain("output");
 	chain->Add(infilename1);
 
